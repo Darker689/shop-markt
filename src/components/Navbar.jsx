@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 // React Router Dom
 import { Link } from 'react-router-dom'
 // Import icons
-import { IoMdSearch, IoMdCart, IoMdHeart, IoIosArrowDown, IoMdClose } from 'react-icons/io'
+import { IoMdSearch, IoMdCart, IoMdHeart, IoIosArrowDown, IoMdClose, IoMdMenu } from 'react-icons/io'
 
 
 const Navbar = () => {
@@ -68,7 +68,10 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="nav_box">
-                    <Link to={'/'} className='nav_logo'>MARKT</Link>
+                    <div className='nav_bar'>
+                        <i className='nav_i'><IoMdMenu /></i>
+                        <Link to={'/'} className='nav_logo'>MARKT</Link>
+                    </div>
                     <div className="nav_links">
                         <Link to={'/'} className='nav_link'>Laptops</Link>
                         <Link to={'/'} className='nav_link'>Phones</Link>
@@ -131,9 +134,9 @@ const Navbar = () => {
                                 }
                             </div>
                         </div>
-                        <div className="nav_sing_in">
+                        <Link to={'/'} className="nav_sign_in">
                             Log in
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </div>
