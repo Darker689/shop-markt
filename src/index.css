@@ -534,4 +534,8 @@ nav {
   .nav_search {
     display: none;
   }
+
+  .sidebar_left{
+    height: max-content;
+  }
 }
