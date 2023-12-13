@@ -2,10 +2,31 @@ import React, { useState } from 'react'
 // React Router Dom
 import { Link } from 'react-router-dom'
 // Import icons
-import { IoMdSearch, IoMdCart, IoMdHeart, IoIosArrowDown, IoMdClose, IoMdMenu } from 'react-icons/io'
+import { FaPhone } from "react-icons/fa6";
+import { FcAbout } from "react-icons/fc";
+import { GiBugleCall } from "react-icons/gi";
+import {
+    IoMdSearch,
+    IoMdCart,
+    IoMdHeart,
+    IoIosArrowDown,
+    IoMdClose,
+    IoMdMenu,
+    IoIosPerson,
+    IoMdLaptop,
+    IoIosPhonePortrait,
+    IoMdHeadset,
+    IoIosLogIn
+} from 'react-icons/io'
+import { LuListOrdered, LuLanguages } from "react-icons/lu";
+import { PiTelevisionSimpleDuotone, PiTruckDuotone } from "react-icons/pi";
+
 
 
 const Navbar = () => {
+    const [bar, setBar] = useState(false);
+    const handleBar = () => setBar(!bar);
+
     const [search, setSearch] = useState(false);
     const handleSearch = () => setSearch(!search);
 
@@ -46,6 +67,9 @@ const Navbar = () => {
         { value: '3', label: 'Uzbekcha' },
     ];
 
+    const [sideLang, setSideLang] = useState(false);
+    const handleSideLang = () => setSideLang(!sideLang);
+
     return (
         <nav>
             <div className="container">
@@ -68,8 +92,54 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="nav_box">
+                    <div className={bar ? "sidebar sidebar_open" : "sidebar"}>
+                        <div className='sidebar_left'>
+                            <div className="sidebar_nav">
+                                <div className="sidebar_nav_left">
+                                    <i className='nav_i'><IoIosPerson /></i>
+                                    <Link to={'/'} className='sideber_nav_log'>Log out</Link>
+                                    <div className='sidebar_line'></div>
+                                    <Link to={'/'} className='sideber_nav_log'>Register</Link>
+                                </div>
+                                <div className="sidebar_nav_right" onClick={handleBar}>
+                                    <i className="nav_i"><IoMdClose /></i>
+                                </div>
+                            </div>
+                            <div className="sidebar_header">
+                                <div className="sidebar_header_links" onClick={handleBar}>
+                                    <Link to={'/new'} className='sidebar_nav_link'><i className='nav_i'><IoMdLaptop /></i>Laptops</Link>
+                                    <Link to={'/'} className='sidebar_nav_link'><i className='nav_i'><IoIosPhonePortrait /></i>Phones</Link>
+                                    <Link to={'/'} className='sidebar_nav_link'><i className='nav_i'><PiTelevisionSimpleDuotone /></i>Televisions</Link>
+                                    <Link to={'/'} className='sidebar_nav_link'><i className='nav_i'><IoMdHeadset /></i>Accessories</Link>
+                                </div>
+                                <p className='sidebar_header_text'>Information</p>
+                                <div className="sidebar_header_links">
+                                    <Link to={'/'} className='sidebar_nav_link' onClick={handleBar}><i className='nav_i'><FcAbout /></i>About</Link>
+                                    <Link to={'/'} className='sidebar_nav_link' onClick={handleBar}><i className='nav_i'><GiBugleCall /></i>Discounts</Link>
+                                    <Link to={'/'} className='sidebar_nav_link' onClick={handleBar}><i className='nav_i'><PiTruckDuotone /></i>Delivery</Link>
+                                    <Link to={'/'} className='sidebar_nav_link' onClick={handleBar}><i className='nav_i'><FaPhone /></i>Contact</Link>
+                                    <Link to={'/'} className='sidebar_nav_link' onClick={handleBar}><i className='nav_i'><LuListOrdered /></i>Orders</Link>
+                                    <div className="side_lang">
+                                        <div className="sidebar_nav_link" onClick={handleSideLang}>
+                                            <i className='nav_i'><LuLanguages /></i>Lang
+                                        </div>
+                                        <div className={sideLang ? "side_lang_box side_lang_box_open" : "side_lang_box"}>
+                                            {
+                                                languages.map(lang => (
+                                                    <div className="side_lang_box_lang" key={lang.value}>{lang.label}</div>
+                                                ))
+                                            }
+                                        </div>
+                                    </div>
+                                    <Link to={'/'} className="sidebar_nav_link" onClick={handleBar}><i className='nav_i'><IoIosLogIn /></i>Log in</Link>
+                                </div>
+                                <a href="tel:+998976611688" className="sidebar_nav_phone">+99897 661 16 88</a>
+                            </div>
+                        </div>
+                        <div className='sidebar_close_div' onClick={handleBar}></div>
+                    </div>
                     <div className='nav_bar'>
-                        <i className='nav_i'><IoMdMenu /></i>
+                        <i className='nav_i' onClick={handleBar}><IoMdMenu /></i>
                         <Link to={'/'} className='nav_logo'>MARKT</Link>
                     </div>
                     <div className="nav_links">

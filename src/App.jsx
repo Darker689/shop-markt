@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 // Pages
 import Home from "./pages/Home"
+import New from "./pages/New"
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" exact element={<Home/>} />
+        <Route path="/new" exact element={<New/>} />
       </Routes>
       <Footer />
     </Router>
