@@ -74,7 +74,7 @@ const Navbar = () => {
         <nav>
             <div className="container">
                 <div className={!search ? 'search' : 'search_none'}>
-                    {/* <div className="none" onClick={handleSearch}></div> */}
+                    <div className="none" onClick={handleSearch}></div>
                     <div className="search_flex container">
                         <Link to={'/'} className='nav_logo'>MARKT</Link>
                         <div className="search_input">

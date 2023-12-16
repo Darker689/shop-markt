@@ -735,6 +735,14 @@ nav {
     height: max-content;
   }
 
+  .none {
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    left: 0;
+    top: 90%;
+  }
+
   /* Main Carusel */
   .main_swipe_img {
     width: 200px;
