@@ -103,7 +103,7 @@ nav {
   position: absolute;
   top: -100%;
   left: 0;
-  z-index: 10;
+  z-index: 22;
   transition: .7s;
 }
 
@@ -114,7 +114,7 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 22;
   transition: .3s;
 }
 
@@ -545,8 +545,8 @@ nav {
   background: var(--wht);
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+.main_swiper .swiper-button-prev,
+.main_swiper .swiper-button-next {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -557,11 +557,11 @@ nav {
   transition: .5s;
 }
 
-.swiper-button-next {
+.main_swiper .swiper-button-next {
   right: -100%;
 }
 
-.swiper-button-prev {
+.main_swiper .swiper-button-prev {
   left: -100%;
 }
 
@@ -573,11 +573,148 @@ nav {
   left: 0;
 }
 
-.swiper-button-prev.swiper-button-disabled,
-.swiper-button-next.swiper-button-disabled {
+.main_swiper .swiper-button-prev.swiper-button-disabled,
+.main_swiper .swiper-button-next.swiper-button-disabled {
   opacity: 1;
   cursor: pointer;
   pointer-events: all;
+}
+
+/* Smartphones */
+
+.smartphones {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.smartphones_box {
+  width: 100%;
+}
+
+.slide_box {
+  position: relative;
+}
+
+.sm_slider {
+  width: 90%;
+  position: unset;
+  user-select: none;
+  padding: 5px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0px;
+  margin-bottom: 50px;
+}
+
+.smartphones_box_slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 20px;
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.smartphones_box_slide_img {
+  width: 100%;
+  height: 250px;
+  padding: 10px;
+}
+
+.smartphones_box_slide_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.smartphones_box_slide_text {
+  margin-top: 10px;
+}
+
+.smartphones_box_slide_text_title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 0px;
+}
+
+.smartphones_box_slide_text_grade {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 7px;
+}
+
+.smartphones_box_slide_text_grade .sm_icon {
+  color: var(--gold);
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.smartphones_box_slide_text_star {
+  font-size: 13px;
+  opacity: .6;
+}
+
+.smartphones_box_slide_text_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.sm_item_price {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.smartphones_box_slide_text_bottom_btn {
+  width: 90px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  border: 1px solid var(--blue);
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.smartphones_box_slide_text_bottom_btn .sm_icon {
+  font-size: 20px;
+  margin-top: 4px;
+  color: var(--blue);
+}
+
+.smartphones_box_slide_text_bottom_btn p {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.sm_item_heart {
+  width: max-content;
+  border: none;
+  outline: none;
+  background: none;
+  color: var(--grey);
+  position: absolute;
+  cursor: pointer;
+  font-size: 19px;
+  top: 15px;
+  right: 15px;
+}
+
+.slide_box .swiper-button-next,
+.slide_box .swiper-button-prev {
+  transform: scale(.4);
+  font-weight: 900;
+  color: var(--gray);
 }
 
 @media screen and (max-width: 1150px) {
@@ -643,8 +780,8 @@ nav {
     height: 700px !important;
   }
 
-  .swiper-button-prev,
-  .swiper-button-next {
+  .main_swiper .swiper-button-prev,
+  .main_swiper .swiper-button-next {
     display: none !important;
   }
 
@@ -663,6 +800,9 @@ nav {
   .main_swipe_text_desc {
     font-size: 48px;
   }
+
+  /* Smartphones */
+
 }
 
 @media screen and (max-width: 640px) {
@@ -700,7 +840,7 @@ nav {
     font-size: 30px;
   }
 
-  .swiper-pagination-bullet {
+  .main_swiper .swiper-pagination-bullet {
     width: 7px !important;
     height: 7px !important;
     border-radius: 10px !important;
@@ -777,5 +917,13 @@ nav {
     align-items: center;
     justify-content: center;
     width: 100%;
+  }
+
+  /* Smartphones */
+  .slide_box .swiper-button-prev {
+    left: -15px;
+  }
+  .slide_box .swiper-button-next {
+    right: -15px;
   }
 }
