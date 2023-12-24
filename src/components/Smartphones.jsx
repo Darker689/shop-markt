@@ -131,8 +131,8 @@ const Smartphones = () => {
                         >
                             {
                                 data.map(item => (
-                                    <SwiperSlide>
-                                        <div className="smartphones_box_slide">
+                                    <SwiperSlide key={item.id}>
+                                        <div className="smartphones_box_slide" >
                                             <div className="smartphones_box_slide_img">
                                                 <img src={item.img} alt={item.img} />
                                             </div>
