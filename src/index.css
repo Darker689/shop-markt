@@ -30,6 +30,7 @@ a {
   --wht: #F7F7F7;
   --white: #fff;
   --black: #070705;
+  --gray_light: #F5F5F7;
   --grey: #989898;
   --gray: #555353;
   --blue: #475BE8;
@@ -689,7 +690,7 @@ nav {
   border: 1px solid var(--blue);
   border-radius: 7px;
   cursor: pointer;
-  background:  var(--blue);
+  background: var(--blue);
   color: var(--white);
 }
 
@@ -799,6 +800,37 @@ nav {
   color: var(--black);
 }
 
+/* KreditCart */
+
+.kredit_cart {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.kredit_cart_box {
+  width: 100%;
+  height: 350px;
+  border-radius: 20px;
+  background: var(--gray_light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kredit_cart_box_img {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kredit_cart_box_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 @media screen and (max-width: 1150px) {
 
   /* navbar */
@@ -895,11 +927,48 @@ nav {
     width: 250px;
     height: 250px;
   }
+
+  /* KreditCart */
+  .kredit_cart_box_img {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .kredit_cart_box_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }
 
 @media screen and (max-width: 790px) {
+
+  /* Category */
   .cat_box {
     min-width: 250px;
+  }
+
+  /* KreditCart */
+  .kredit_cart_box {
+    height: auto;
+    background: none;
+  }
+
+  .kredit_cart_box_img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .kredit_cart_box_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
 
