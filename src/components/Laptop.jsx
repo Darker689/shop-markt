@@ -1,7 +1,7 @@
 import React from 'react'
 // icon
 import { FaStar, FaHeart } from "react-icons/fa";
-import { IoIosCart } from "react-icons/io";
+import { IoIosCart, IoIosArrowRoundForward } from "react-icons/io";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -15,7 +15,7 @@ import 'swiper/css/navigation';
 import { FreeMode, Navigation } from 'swiper/modules';
 
 // img
-import img from "../images/img2.png"
+import img from "../images/img1.png"
 import { Link } from 'react-router-dom';
 
 // data
@@ -23,7 +23,7 @@ const data = [
     {
         id: 1,
         img: img,
-        title: "IPhone 13 Pro Max",
+        title: "Lenovo V15 Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) V15 G3 IAP Thin and Light Laptop",
         grade: 5,
         coment: 1,
         price: 650,
@@ -31,7 +31,7 @@ const data = [
     {
         id: 2,
         img: img,
-        title: "IPhone 13 Pro Max",
+        title: "Lenovo V15 Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) V15 G3 IAP Thin and Light Laptop",
         grade: 4,
         coment: 0,
         price: 650,
@@ -39,7 +39,7 @@ const data = [
     {
         id: 3,
         img: img,
-        title: "IPhone 13 Pro Max",
+        title: "Lenovo V15 Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) V15 G3 IAP Thin and Light Laptop",
         grade: 3,
         coment: 2,
         price: 650,
@@ -47,7 +47,7 @@ const data = [
     {
         id: 4,
         img: img,
-        title: "IPhone 13 Pro Max",
+        title: "Lenovo V15 Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) V15 G3 IAP Thin and Light Laptop",
         grade: 3,
         coment: 2,
         price: 650,
@@ -63,7 +63,7 @@ const data = [
     {
         id: 6,
         img: img,
-        title: "IPhone 13 Pro Max",
+        title: "Lenovo V15 Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) V15 G3 IAP Thin and Light Laptop",
         grade: 3,
         coment: 2,
         price: 650,
@@ -71,7 +71,7 @@ const data = [
     {
         id: 7,
         img: img,
-        title: "IPhone 13 Pro Max",
+        title: "Lenovo V15 Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) V15 G3 IAP Thin and Light Laptop",
         grade: 3,
         coment: 2,
         price: 650,
@@ -79,7 +79,7 @@ const data = [
     {
         id: 8,
         img: img,
-        title: "IPhone 13 Pro Max",
+        title: "Lenovo V15 Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) V15 G3 IAP Thin and Light Laptop",
         grade: 3,
         coment: 2,
         price: 650,
@@ -87,19 +87,22 @@ const data = [
     {
         id: 9,
         img: img,
-        title: "IPhone 13 Pro Max",
+        title: "Lenovo V15 Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) V15 G3 IAP Thin and Light Laptop",
         grade: 3,
         coment: 2,
         price: 650,
     },
 ]
 
-const Smartphones = () => {
+const Laptop = () => {
     return (
         <div className='smartphones'>
             <div className="container ">
                 <div className="smartphones_box">
-                    <p className='title'>Smartphone</p>
+                    <div className="categories_box_top">
+                        <p className='title'>Laptop</p>
+                        <Link to={'/'} className='cat_link'>Go to all <i className='cat_icon'><IoIosArrowRoundForward /></i></Link>
+                    </div>
                     <div className="slide_box">
                         <Swiper
                             slidesPerView={4}
@@ -166,4 +169,4 @@ const Smartphones = () => {
     )
 }
 
-export default Smartphones;
+export default Laptop

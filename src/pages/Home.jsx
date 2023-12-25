@@ -3,6 +3,7 @@ import React from 'react'
 import MainCarusel from '../components/MainCarusel'
 import Smartphones from '../components/Smartphones'
 import Categories from '../components/Categories'
+import Laptop from '../components/Laptop'
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <MainCarusel />
       <Smartphones />
       <Categories />
+      <Laptop />
     </>
   )
 }
