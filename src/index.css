@@ -318,7 +318,6 @@ nav {
   position: absolute;
   top: 0;
   left: -100%;
-  z-index: 10;
   display: none;
   transition: .3s;
 }
@@ -327,6 +326,7 @@ nav {
   width: 250px;
   height: 100vh;
   background: var(--wht);
+  z-index: 10;
 }
 
 
@@ -1149,7 +1149,7 @@ footer {
   }
 
   .sidebar_left {
-    height: max-content;
+    /* height: max-content; */
   }
 
   .none {
